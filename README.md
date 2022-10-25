@@ -15,7 +15,7 @@ statsmodel 0.13.2\
 ############################\
 #########INIT #############\
 
-1) create 'raw' folder with all .edf files \
+1) create 'raw' folder with all .edf files\
 2) create 'outcomes' folder with .csv with patients outcomes\
 3) change project_path in HEP_Miami_master.py and in configs_HEP_Miami.py. Path should correspond to folder containing 'raw', 'outcomes' and 'scripts' folders\
 
