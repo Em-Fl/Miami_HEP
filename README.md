@@ -2,7 +2,7 @@
 
 preprocessing and analysis pipeline for EEG and ECG data from DoC patients\
 
-###################################### DEPENDENCIES #################################################\
+########## DEPENDENCIES ########\
 MNE 0.24.1\
 mplcursors  0.5.1\
 neurokit2 0.2.0\
@@ -12,8 +12,8 @@ python 3.9.13\
 scipy 1.8.1\
 statsmodel 0.13.2\
 
-###################################################################################################
-###################################### INIT #################################################\
+############################\
+#########INIT #############\
 
 1) create 'raw' folder with all .edf files \
 2) create 'outcomes' folder with .csv with patients outcomes\
