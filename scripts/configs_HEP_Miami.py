@@ -20,7 +20,7 @@ from os import makedirs
 #                                PATHS
 ##############################################################################
 
-## CHANGE PATH  AND RUN SCRIPT!! 
+## CHANGE PATH 
 project_path ='/DATA1/Dropbox/PhD/Project_HEP/Miami_HEP/'
 
 

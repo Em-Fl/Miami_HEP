@@ -221,7 +221,7 @@ def markers_stats_n_plot(group_by,markers_list,all_subj_markers,all_subj_epochs_
         
         groups = list(np.unique(df[indep_var]))
         
-        if group_by=='outcome':
+        if group_by!='outcome':
             groups.reverse()
             
         x = df[df[indep_var]==groups[0]][marker]
@@ -261,7 +261,7 @@ def markers_stats_n_plot(group_by,markers_list,all_subj_markers,all_subj_epochs_
         
         groups = list(np.unique(df[indep_var]))
         
-        if group_by=='outcome':
+        if group_by!='outcome':
             groups.reverse()
             
         x = df[df[indep_var]==groups[0]][marker]
@@ -359,7 +359,7 @@ def ecg_param_stats_n_plot(df_file,group_by,cfg,overwrite):
                         hspace=0.4)
     groups = list(np.unique(ecg_params[indep_var]))
 
-    if group_by=='outcome':
+    if group_by!='outcome':
         groups.reverse()
 
     pt.RainCloud(x = indep_var, y = dep_var[0], data = ecg_params_select, palette = cfg.palette, bw = .2,

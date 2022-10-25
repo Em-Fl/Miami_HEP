@@ -171,7 +171,7 @@ def get_average_voltage_HEP(file,files,mean_HEP_all_subj,cfg):
 # plots histogram for number of epochs for each groupping category
 #
 #=========================================================================         
-def grand_average_evokeds(conditions,evoked_data_all,cfg,epochs_included,n_epochs,overwrite):
+def grand_average_evokeds(conditions,group_by,evoked_data_all,cfg,epochs_included,n_epochs,overwrite):
     
     conditions = list(evoked_data_all.keys())
     today = str(date.today())
@@ -201,10 +201,13 @@ def grand_average_evokeds(conditions,evoked_data_all,cfg,epochs_included,n_epoch
     condition1 = df[df['epochs_file'].str.contains(conditions[0])]['number_epochs']
 
     condition2 = df[df['epochs_file'].str.contains(conditions[1])]['number_epochs']
-    plt.hist(condition1)
-    plt.hist(condition2)
+    fig,ax =plt.subplots(1,1)
+    plt.hist(condition1, color=cfg.palette[0])
+    plt.hist(condition2, color=cfg.palette[1])
+    plt.suptitle('number epochs')
     plt.show()
     plt.pause(5)
+    fig.savefig(join(cfg.images_path,'histogram_number_epochs_'+group_by +'.pdf'))
     plt.close()
         
 

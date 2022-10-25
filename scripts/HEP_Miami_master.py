@@ -85,7 +85,7 @@ mean_HEP_all_subj = pd.DataFrame(columns = cfg.columns_HEP)
 # WHAT TO GROUP: outcome, command_score_dc, gose_dc ##
 
 group_by ='gose_dc'  
-epoch_type = 'markers'  #HEP or marker
+epoch_type = 'HEP'  #HEP or marker
 
 # FILES TO PREPROCESS
 files_to_run = (0,None) 
@@ -125,7 +125,7 @@ operations_to_apply = dict(
                     markers_stats_n_plot = 0,       
                     
                     final_summary_df = 0, 
-                    HEP_markers_corr = 0)
+                    HEP_markers_corr = 1)
 
 #%%
 
@@ -243,7 +243,7 @@ for file_id in files_id[files_to_run[0]:files_to_run[1]]:
                     trial_type = evoked.comment
                     evoked_data_all[trial_type].append(evoked) 
       
-        files_number_epochs=grand_average_evokeds(conditions,evoked_data_all,cfg,epochs_included, n_epochs,overwrite=overwrite)
+        files_number_epochs=grand_average_evokeds(conditions,group_by,evoked_data_all,cfg,epochs_included, n_epochs,overwrite=overwrite)
         condition1 = files_number_epochs[files_number_epochs['epochs_file'].str.contains(conditions[0])]
         condition1.reset_index(inplace=True)
         condition2 = files_number_epochs[files_number_epochs['epochs_file'].str.contains(conditions[1])]
@@ -280,7 +280,7 @@ for file_id in files_id[files_to_run[0]:files_to_run[1]]:
                     trial_type = evoked.comment
                     evoked_data_all[trial_type].append(evoked) 
                     
-        channel = 'C3' 
+        channel = 'Pz' 
         
         plot_compare_evokeds(evoked_data_all,epochs_included,n_epochs,group_by,conditions,channel,cfg,
                                         trace_plot='yes',overwrite=overwrite)
