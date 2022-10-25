@@ -12,15 +12,15 @@ python 3.9.13\
 scipy 1.8.1\
 statsmodel 0.13.2
 
-#########INIT #############
+######### INIT #############<br/>
 
--create 'raw' folder with all .edf files\
+-create 'raw' folder with all .edf files<br/>
 
--create 'outcomes' folder with .csv with patients outcomes\
+-create 'outcomes' folder with .csv with patients outcomes<br/>
 
--change project_path in HEP_Miami_master.py and in configs_HEP_Miami.py\
+-change project_path in HEP_Miami_master.py and in configs_HEP_Miami.py<br/>
 
-Path should correspond to folder containing 'raw', 'outcomes' and 'scripts' folders\
+Path should correspond to folder containing 'raw', 'outcomes' and 'scripts' folders<br/>
 
 
 
