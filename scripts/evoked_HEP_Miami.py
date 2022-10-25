@@ -6,19 +6,9 @@ Created on Mon Mar  7 11:15:16 2022
 @author: emilia.ramaflo
 """
 import pandas as pd
-pd.options.mode.chained_assignment = None  # default='warn'
-import numpy as np
-import seaborn as sns
 import matplotlib.pyplot as plt
-from os.path import join, isfile, isdir
-from os import chdir, makedirs, listdir, environ,walk
-import glob
-import re
+from os.path import join
 import mne
-from mne.time_frequency import (tfr_multitaper, tfr_stockwell, tfr_morlet,
-                                tfr_array_morlet,psd_welch)
-
-import itertools
 import pickle
 from datetime import date
 

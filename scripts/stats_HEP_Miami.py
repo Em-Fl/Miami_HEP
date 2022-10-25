@@ -16,7 +16,6 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from scipy.stats import mannwhitneyu
 import ptitprince as pt
-import statsmodels.api as sm
 from scipy.stats import zscore
 from datetime import date
 

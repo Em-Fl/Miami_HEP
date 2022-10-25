@@ -13,35 +13,21 @@
 
 import matplotlib
 matplotlib.use('Qt5Agg')# To select bad hearbeats iteratively
-import matplotlib.pyplot as plt
-import neurokit2 as nk
 import pandas as pd
-
-import numpy as np
-import seaborn as sns
 import os
-from os.path import join, isfile, isdir
-from os import chdir, makedirs, listdir, environ,walk
+from os import chdir
 import glob
-import re
 import mne
 mne.viz.set_browser_backend('matplotlib')  
-from scipy import stats, signal
-import seaborn as sns
-from sklearn import metrics
-import itertools
-import pickle
-from neurokit2 import epochs_create, epochs_to_df
 from datetime import date
-import time
 
 
 #%% IMPORT FUNCTIONS SPECIFIC TO THIS PROJECT
 
 # CHANGE PATH ACCORDINGLY !
-wd ='/DATA1/Dropbox/PhD/Project_HEP/Miami_HEP'
+project_path ='/DATA1/Dropbox/PhD/Project_HEP/Miami_HEP'
 
-script_path  = glob.glob(wd +'/**/HEP_Miami_master.py', recursive=True)[0]
+script_path  = glob.glob(project_path +'/**/HEP_Miami_master.py', recursive=True)[0]
 all_script_path = os.path.dirname(script_path)
 
 chdir(all_script_path)

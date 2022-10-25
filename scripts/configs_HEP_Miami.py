@@ -12,9 +12,8 @@
 
 """
 import numpy as np
-import pandas as pd
-from os.path import join, isfile, isdir
-from os import makedirs, listdir, environ,walk
+from os.path import join, isdir
+from os import makedirs
 
 
 ###############################################################################

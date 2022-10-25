@@ -4,11 +4,8 @@
 @author: Em-Fl (emilia.flo.rama at gmail)
 
 """
-import pickle
 import pandas as pd
-import numpy as np
-from os import chdir
-from os.path import join, isfile, isdir
+from os.path import join
 
 #========================================================================
 #

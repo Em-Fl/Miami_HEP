@@ -5,28 +5,14 @@
 modified from @DraganaMana !
 
 """
-import os
-import os.path as op
-from os.path import join, isfile, isdir
-
+from os.path import join
 import numpy as np
-import matplotlib.pyplot as plt
 import pandas as pd
-from datetime import date
-import time
-import os
 import mne
-import ptitprince as pt
-import nice 
 from nice.markers import (KolmogorovComplexity, PowerSpectralDensityEstimator, 
                           PowerSpectralDensity, SymbolicMutualInformation, PermutationEntropy)
 
-from sklearn.metrics import roc_auc_score
-import scipy
-from autoreject import AutoReject, get_rejection_threshold, compute_thresholds
 import pickle
-from scipy.stats import mannwhitneyu
-import seaborn as sns
 
 #========================================================================
 #
