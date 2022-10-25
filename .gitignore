@@ -1,1 +1,10 @@
+data_summary/
+ecg_params/
+eeg_markers/
+HEP_Miami_summary/
+images/
+misc/
+outcomes/
+preprocessing/
+raw/
 statistics/
