@@ -21,7 +21,8 @@ from os import makedirs
 ##############################################################################
 
 ## CHANGE PATH 
-project_path ='/DATA1/Dropbox/PhD/Project_HEP/Miami_HEP/'
+# project_path ='/DATA1/Dropbox/PhD/Project_HEP/Miami_HEP/'
+project_path ='/home/emilia.ramaflo/Dropbox/PhD/Project_HEP/Miami_HEP'
 
 
 raw_path = join(project_path,'raw')
@@ -170,7 +171,7 @@ events_dict['gose_dc']['good']= [4,5,6,7,8]
 
 cl_stat_dict = {}
 
-cl_stat_dict['time_window'] = [0,0.6+0.005]
+cl_stat_dict['time_window'] = [0.6,0.8+0.005]
 cl_stat_dict['n_permutations'] = 2000
 cl_stat_dict['max_step'] = 1
 cl_stat_dict['init_p_value'] = 0.05

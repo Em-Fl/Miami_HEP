@@ -11,7 +11,7 @@
 
 #%% IMPORT PYTHON LIBRARIES
 
-import matplotlib
+import matplotlib 
 matplotlib.use('Qt5Agg')# To select bad hearbeats iteratively
 import pandas as pd
 import os
@@ -20,12 +20,14 @@ import glob
 import mne
 mne.viz.set_browser_backend('matplotlib')  
 from datetime import date
+import matplotlib.pyplot as plt
 
-
-#%% IMPORT FUNCTIONS SPECIFIC TO THIS PROJECT
+plt.close('all')
+# %% IMPORT FUNCTIONS SPECIFIC TO THIS PROJECT
 
 # CHANGE PATH ACCORDINGLY !
-project_path ='/DATA1/Dropbox/PhD/Project_HEP/Miami_HEP'
+# project_path ='/DATA1/Dropbox/PhD/Project_HEP/Miami_HEP'
+project_path ='/home/emilia.ramaflo/Dropbox/PhD/Project_HEP/Miami_HEP'
 
 script_path  = glob.glob(project_path +'/**/HEP_Miami_master.py', recursive=True)[0]
 all_script_path = os.path.dirname(script_path)
@@ -84,7 +86,7 @@ mean_HEP_all_subj = pd.DataFrame(columns = cfg.columns_HEP)
 
 # WHAT TO GROUP: outcome, command_score_dc, gose_dc ##
 
-group_by ='gose_dc'  
+group_by ='command_score_dc'  
 epoch_type = 'HEP'  #HEP or marker
 
 # FILES TO PREPROCESS
@@ -114,7 +116,7 @@ operations_to_apply = dict(
                     grand_average_evokeds = 0,
                     get_average_voltage_HEP = 0,
                     plot_compare_evokeds = 0,
-                    plot_compare_topography = 0,
+                    plot_compare_topography =1,
                     statistics_space_time = 0,
                     plot_significant_electrodes = 0,
                     
@@ -122,10 +124,10 @@ operations_to_apply = dict(
                     ecg_param_stats_n_plot = 0,
                     
                     get_eeg_markers = 0,
-                    markers_stats_n_plot = 0,       
+                    markers_stats_n_plot = 1,       
                     
                     final_summary_df = 0, 
-                    HEP_markers_corr = 1)
+                    HEP_markers_corr = 0)
 
 #%%
 

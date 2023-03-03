@@ -21,6 +21,7 @@ import mplcursors
 # manually by using the cursos (mpl)
 #=========================================================================  
 def plot_compare_evokeds(evoked_data_all,epochs_included,n_epochs,group_by,conditions,channel,cfg,trace_plot,overwrite): 
+    
     today = str(date.today())
     
     ERP_CI_fig = 'ERP_CI_' +group_by + '_'+ channel +'_'+today+'.pdf'
@@ -39,14 +40,18 @@ def plot_compare_evokeds(evoked_data_all,epochs_included,n_epochs,group_by,condi
                                      colors=[cfg.palette[0],cfg.palette[1]],
                                      axes=ax,styles=styles)
     
+        ax.legend(frameon=False, loc='lower right',labels= ['good', 'ci 95%','bad','ci 95%'])
+
+
 
         plt.show()
         plt.pause(2)
         fig.savefig(ERP_CI_fig_path, dpi=300)
-        plt.close()
+
         
         ERP_trace_fig = 'ERP_trace_' + group_by + '_'+channel + '_'+today+'.pdf'
         ERP_trace_fig_path = join(cfg.images_path,ERP_trace_fig)
+
         
                       
         if trace_plot == 'yes':

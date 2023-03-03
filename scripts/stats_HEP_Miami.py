@@ -320,7 +320,7 @@ def ecg_param_stats_n_plot(df_file,group_by,cfg,overwrite):
     ecg_params_w_category = ecg_params
     
     indep_var = group_by +'_category'
-    dep_var = [ 'ECG_Rate_Mean','HRV_MeanNN']
+    dep_var = [ 'ECG_Rate_Mean','HRV_RMSSD']
     
     file_names = ecg_params['file_id']
     rename=[]
@@ -375,7 +375,7 @@ def ecg_param_stats_n_plot(df_file,group_by,cfg,overwrite):
     ax1[1].set_ylabel('')
     ax1[1].set_xlabel('Heart rate variability',fontsize=14)
     ax1[1].tick_params(axis = 'both', which = 'major', labelsize = 14)
-    plt.suptitle(group_by)
+    # plt.suptitle(group_by)
 
     plt.show()
     plt.pause(2)
